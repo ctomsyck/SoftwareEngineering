@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<!--Main-->
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+	<title>Journal of Bioethical Inquiry</title>
+
+</head>
+<body id="body1">
+    <script type="text/javascript">
+        function LoginChief () {
+            
+            document.getElementById("frameI").setAttribute("src","loginC.html");
+            
+        }
+    function LoginManage () {
+        
+        document.getElementById("frameI").setAttribute("src","loginM.html");
+        
+    }
+    function LoginAssociate () {
+        
+        document.getElementById("frameI").setAttribute("src","loginA.html");
+        
+    }
+    function LoginReviewer () {
+        
+        document.getElementById("frameI").setAttribute("src","loginR.html");
+        
+    }
+    function LoginSubmitter () {
+        
+        document.getElementById("frameI").setAttribute("src","loginS.html");
+        
+    }
+    function Register () {
+        
+        document.getElementById("frameI").setAttribute("src","Registration.html");
+        
+    }
+    function Home () {
+        
+        document.getElementById("frameI").setAttribute("src","home.html");
+        
+    }
+    </script>
+        <br><br>
+        <center>
+          
+            <div class="a">
+                <a onclick="Home()">Home</a> &nbsp;
+                <a onclick="Register()">Register</a> &nbsp;
+                <a onclick="LoginChief()">Editor in Chief</a> &nbsp;
+                <a onclick="LoginManage()">Managing Editor</a> &nbsp;
+                <a onclick="LoginAssociate()">Associate Editor</a> &nbsp;
+                <a onclick="LoginReviewer()">Reviewer</a> &nbsp;
+                <a onclick="LoginSubmitter()">Submitter</a> &nbsp; </div> 
+                
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+            
+            <br>
+            
+            <iframe name="frameI" src="home.html" id="frameI" width="900px" height="700px"> </iframe>
+            
+        </center>
+</body>
+</html>

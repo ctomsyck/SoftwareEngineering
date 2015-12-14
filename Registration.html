@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<!--Registration-->
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+	<title>Registration</title>
+	<script>
+	function submitfile(){
+		document.Registration.action = 'contact.php';
+	}
+	function submitdatabase(){	   
+		document.Registration.action = 'contactsdatabase.php';
+	}
+	function check() {
+		if(document.getElementById('Password').value === document.getElementById('conf_pass').value) {
+			document.getElementById('message').innerHTML = "passwords match";
+		} else {
+			document.getElementById('message').innerHTML = "passwords do not match";
+		}
+	}
+	</script>
+</head>
+
+<body id="body1">
+	<div id="header">
+		<img src="image/title.png" width="423px" height="126px">
+	</div>
+		
+	<br>
+	<br>
+	<div class="wrapper">
+	<h1>Create an Account</h1>
+	<div class="registerForm">	
+		
+		<form name="Registration" method="post">
+			<div class="registerForm2">
+				<input type="text" id="firstname" name="firstname" placeholder="First name" maxlength="25" pattern="[a-zA-Z0-9]+" required/> 
+				<input type="text" id="lastname" name="lastname" placeholder="Last name" maxlength="25" pattern="[a-zA-Z0-9]+" required/>
+			</div>
+			<input type="text" id="Username" name="Username" placeholder="Username" maxlength="25" pattern="[a-zA-Z0-9]+" required/>
+			<input type="password" id="Password" name="Password" placeholder="Password" maxlength="25" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+			title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required/>
+
+			<input type="password" id="conf_pass" name="conf_pass" placeholder="Comfirm your Password" maxlength="25" onchange="check()" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required/>
+
+			<input type="text" id="email" name="email" maxlength="40" placeholder="name@domain.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required/>
+
+			<input type="text" id="academicdegrees" name="academicdegrees" placeholder="Academic Degrees" maxlength="40"/>
+
+			<input type="text" id="organizations" name="organizations" placeholder="Organizations" maxlength=40/>
+			
+			<div align="center">
+				<input type="submit" id="saveToDatabase" value="Create Account" onclick="submitdatabase();return true;"/>
+			</div>
+			<div class="a">
+				
+			</div>
+		</form>
+		
+				</div>
+			<div class="push"></div>
+			</div>
+
+			<footer>Copyright &copy; 2015</footer>
+
+	</body>
+	</html>

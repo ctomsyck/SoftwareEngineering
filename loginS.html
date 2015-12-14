@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<!--Christopher Tomsyck Login-->
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+	<title>Login</title>
+	<script>
+	function login(){
+		document.Login.action = 'loginS.php';
+	}
+	</script>
+</head>
+
+<body id="body1">
+	<div id="header">
+		<img src="image/title.png" align="center" width="423px" height="126px">
+	</div>
+	<br>
+	<br>
+	<div class="wrapper">
+		<h1>Log In Author</h1>
+		<div class="loginForm" >	
+			<form name="Login" method="post" align = "center">
+				<input type="text" id="Username" name="Username" placeholder="Username" maxlength="25" pattern="[a-zA-Z0-9]+" required/><br>
+				<input type="password" id="Password" name="Password" placeholder = "Password" maxlength="25" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+				title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required/><br>
+				<div align="center">
+					<input type="submit" id="Login" value="Sign In" onclick="login();return true;"/></div>
+					<div class="a">
+						<br><a href="Registration.html">Create a Account</a>
+						| <a href="Registration.html">Forgot your password?</a></div> 
+					</form>
+
+				</div>
+				<div class="push"></div>
+			</div>
+	
+			<footer>Copyright &copy; 2015</footer>
+
+		</body>
+		</html>

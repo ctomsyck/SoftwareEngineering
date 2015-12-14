@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<!--Christopher Tomsyck Login-->
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+	<title>Login</title>
+	<script>
+	   function login(){
+	   document.Login.action = 'login.php';
+	   }
+	   
+    </script>
+</head>
+<body bgcolor="#EBF4FA">
+    <center>
+        <img src= ./image/logo.jpg>
+            <br>
+            <br>
+	<table>
+        <table bgcolor="#E5E4E2">
+	<form name="Login" method="post">
+		<tr>
+		<td><th>Login Form</th></td>
+		</tr>
+			<tr>
+				<td>Username:</td> 
+				<td>&nbsp;</td>
+				<td><input type="text" id="Username" name="Username" maxlength="25" pattern="[a-zA-Z0-9]+" required/></td>
+			</tr>
+			<tr>
+				<td>Password:</td>
+				<td>&nbsp;</td>
+				<td><input type="password" id="Password" name="Password" maxlength="25" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+				title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required/></td>
+			</tr>
+			<tr>
+				<td><input type="reset" id="reset" value="reset"></td>
+				<td><input type="submit" id="Login" value="Login" onclick="login();return true;"/></td>
+	</form>
+	</table>
+    <br>
+        <button type="button" onclick="window.location.href='index.html'">Return to the main page</button>
+    </center>
+</body>
+</html>
